@@ -61,8 +61,10 @@ function norm(raw){
     .replace(/end\s+if\b/g,'end if').replace(/end\s+for\b/g,'end for')
     .replace(/end\s+while\b/g,'end while').replace(/end\s+function\b/g,'end function')
     .replace(/else\s+if\b/g,'else if')
-    .replace(/\u2260|<>/g,'!=').replace(/\u2265/g,'>=').replace(/\u2264/g,'<=')
-    .replace(/\s+/g,' ').trim();
+    .replace(/\u2260|<>/g,'!=').replace(/\u2265/g,'>=')<=')
+    .replace(/,\s*/g,', ')
+    .replace(/\u2264/g,'<=')
+    .replace(/,\s*/g,', ').replace(/\s+/g,' ').trim();
 }
 function has(t,p){return t.includes(p.toLowerCase());}
 function checkCrit(answer,cr){
